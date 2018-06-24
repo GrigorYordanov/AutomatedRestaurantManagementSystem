@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="416.0" style="-fx-background-color: #345E41;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.manageusers.StaffRegistrationController">
+   <children>
+      <Pane layoutX="24.0" layoutY="69.0" prefHeight="393.0" prefWidth="368.0" style="-fx-background-color: #5EAB77; -fx-background-radius: 10 10 10 10;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5eab77" height="83.0" layoutX="149.0" layoutY="-55.0" stroke="BLACK" strokeType="INSIDE" width="73.0" />
+            <ImageView fx:id="usrIcon" fitHeight="99.0" fitWidth="114.0" layoutX="136.0" layoutY="-65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/user.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutY="39.0" prefHeight="30.0" prefWidth="368.0" text="Registration" textFill="#f2e8e8">
+               <font>
+                  <Font name="Segoe UI Semibold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstName" layoutX="123.0" layoutY="88.0" prefHeight="25.0" prefWidth="99.0" promptText="First Name" style="-fx-background-color: #345E41; -fx-text-fill: white;" />
+            <TextField fx:id="lastName" layoutX="243.0" layoutY="88.0" prefHeight="25.0" prefWidth="99.0" promptText="Last Name" style="-fx-background-color: #345E41; -fx-text-fill: white;" />
+            <TextField fx:id="username" layoutX="123.0" layoutY="116.0" prefHeight="25.0" prefWidth="219.0" promptText="Username" style="-fx-background-color: #345E41; -fx-text-fill: white;" />
+            <TextField fx:id="email" layoutX="123.0" layoutY="172.0" prefHeight="25.0" prefWidth="219.0" promptText="Email" style="-fx-background-color: #345E41; -fx-text-fill: white;" />
+            <TextField fx:id="password" layoutX="123.0" layoutY="144.0" prefHeight="25.0" prefWidth="219.0" promptText="Password" style="-fx-background-color: #345E41; -fx-text-fill: white;" />
+            <TextField fx:id="number" layoutX="123.0" layoutY="200.0" prefHeight="25.0" prefWidth="219.0" promptText="Phone Number" style="-fx-background-color: #345E41; -fx-text-fill: white;" />
+            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="90.0" prefHeight="21.0" prefWidth="68.0" text="Name" textFill="#f2e8e8">
+               <font>
+                  <Font name="Segoe UI Semibold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="118.0" text="Username" textFill="#f2e8e8">
+               <font>
+                  <Font name="Segoe UI Semibold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="146.0" prefHeight="21.0" prefWidth="68.0" text="Password" textFill="#f2e8e8">
+               <font>
+                  <Font name="Segoe UI Semibold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="174.0" prefHeight="21.0" prefWidth="68.0" text="Email" textFill="#f2e8e8">
+               <font>
+                  <Font name="Segoe UI Semibold" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="202.0" prefHeight="21.0" prefWidth="68.0" text="Number" textFill="#f2e8e8">
+               <font>
+                  <Font name="Segoe UI Semibold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="address" layoutX="123.0" layoutY="229.0" prefHeight="60.0" prefWidth="219.0" promptText="Address" style="-fx-background-color: #345E41; -fx-text-fill: white;" />
+            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="249.0" prefHeight="21.0" prefWidth="68.0" text="Address" textFill="#f2e8e8">
+               <font>
+                  <Font name="Segoe UI Semibold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="role" layoutX="123.0" layoutY="296.0" prefHeight="25.0" prefWidth="219.0" promptText="Select Role" style="-fx-background-color: #345E41; -fx-text-fill: white;" />
+            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="298.0" prefHeight="21.0" prefWidth="68.0" text="Role" textFill="#f2e8e8">
+               <font>
+                  <Font name="Segoe UI Semibold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="registerButton" layoutX="123.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#registerUser" prefHeight="25.0" prefWidth="219.0" style="-fx-background-color: green;" text="Register" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="17.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <ImageView fx:id="backButton" fitHeight="25.0" fitWidth="32.0" layoutX="24.0" layoutY="14.0" onMouseClicked="#navigateBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/back-arrow.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

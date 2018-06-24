@@ -1,0 +1,9 @@
+0,lasagnia,8.50,TEST,5,1,,1,false
+1,pizza,6.50,TEST,5,0,,1,true
+2,water,2.50,TEST,4,0,,3,true
+3,cola,1.50,TEST,4,0,,4,true
+4,beer,3.20,TEST,4,0,,5,true
+5,coffe,1.20,TEST,4,0,,6,true
+6,donut,1.00,TEST,3,0,,7,true
+7,mealdeal1,5.50,TEST,6,1,1,8,false
+8,mealdeal2,7.50,TEST,6,1,2,9,true

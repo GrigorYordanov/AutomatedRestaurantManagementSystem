@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TitledPane alignment="CENTER" animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0" style="-fx-border-width: 0;" text="PAYMENT" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.paymentscreen.PaymentController">
+   <font>
+      <Font name="Segoe UI Semibold" size="20.0" />
+   </font>
+   <content>
+      <SplitPane fx:id="paymentSplit" dividerPositions="0.8225806451612904" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="310.0" prefWidth="305.0" style="-fx-padding: 0 0 0 0;">
+        <items>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" style="-fx-border-width: 0;">
+               <children>
+                  <TextField id="textbox" fx:id="nameInput" alignment="CENTER" layoutX="23.0" layoutY="-47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="0" prefHeight="35.0" prefWidth="265.0" promptText="NAME ON CARD" style="-fx-border-radius: 10 10 10 10; -fx-border-color: #929599; -fx-background-radius: 10 10 10 10;" translateX="-5.0" translateY="90.0">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="textbox" fx:id="cardNumberInput" alignment="CENTER" layoutX="17.0" layoutY="116.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="0" prefHeight="35.0" prefWidth="265.0" promptText="CARD NUMBER" style="-fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10; -fx-border-color: #929599;">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="textbox" fx:id="securityNumber" alignment="CENTER" layoutX="182.0" layoutY="192.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="0" prefHeight="35.0" prefWidth="100.0" promptText="CVV" style="-fx-border-color: #929599; -fx-background-radius: 10 10 10 10; -fx-border-radius: 10 10 10 10;">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="textbox" fx:id="yearExp" alignment="CENTER" layoutX="80.0" layoutY="192.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="0" prefHeight="35.0" prefWidth="60.0" promptText="YYYY" style="-fx-background-radius: 0 10 10 0; -fx-border-color: #929599; -fx-border-radius: 0 10 10 0;">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField id="textbox" fx:id="monthExp" alignment="CENTER" layoutX="22.0" layoutY="192.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="0" prefHeight="35.0" prefWidth="58.0" promptText="MM" style="-fx-border-color: #929599; -fx-border-radius: 10 0 0 10; -fx-background-radius: 10 0 0 10;">
+                     <font>
+                        <Font name="Segoe UI Light" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label contentDisplay="TOP" layoutX="110.0" layoutY="26.0" prefHeight="17.0" prefWidth="81.0" text="Name on Card" />
+                  <Label layoutX="113.0" layoutY="99.0" prefHeight="17.0" prefWidth="76.0" text="Card Number" />
+                  <Label layoutX="61.0" layoutY="175.0" prefHeight="17.0" prefWidth="38.0" text="Expiry" />
+                  <Label layoutX="194.0" layoutY="175.0" prefHeight="17.0" prefWidth="76.0" text="Security Code" />
+                  <Label fx:id="userIdLbl" layoutX="2.0" layoutY="1.0" text="User ID:">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+          <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="310.0" style="-fx-border-width: 0;">
+               <children>
+                  <Label fx:id="confirmButton" alignment="CENTER" contentDisplay="TOP" onMouseClicked="#confirmPayment" prefHeight="51.0" prefWidth="155.0" style="-fx-background-color: #54f787;" text="CONFIRM" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cancelButton" alignment="CENTER" contentDisplay="TOP" layoutX="155.0" onMouseClicked="#cancelTransaction" prefHeight="51.0" prefWidth="155.0" style="-fx-background-color: #f93b3b;" text="CANCEL" textAlignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="12.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </content>
+</TitledPane>

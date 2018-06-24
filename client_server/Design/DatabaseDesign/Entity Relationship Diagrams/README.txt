@@ -1,0 +1,1 @@
+To view the XML files as diagrams, upload them to https://www.draw.io/

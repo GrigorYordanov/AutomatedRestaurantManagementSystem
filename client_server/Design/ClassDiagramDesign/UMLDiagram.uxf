@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>672</y>
+      <w>147</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Singleton&gt;&gt;
+Menu
+--
+_*Attributes:*_
+-menuItems: ArrayList&lt;MenuItem&gt;
+-mealDeals: ArrayList&lt;MealDeal&gt;
+--
+_*Responsibilities:*_
++getMenuItems(): ArrayList&lt;MenuItem&gt;
++getMealDeals(): ArrayList&lt;MealDeal&gt;
++sortCost(): void
++sortCalories(): void
++sortAllergy(allergies: Allergy): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>728</y>
+      <w>126</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>693</y>
+      <w>147</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>MealDeal
+--
+_*Attributes:*_
+-menuItems: ArrayList&lt;MenuItem&gt;
+-cost: double
+--
+_*Responsibilities:*_
++getMenuItems(): ArrayList&lt;MenuItem&gt;
++getCost(): double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>469</x>
+      <y>301</y>
+      <w>126</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>581</x>
+      <y>238</y>
+      <w>126</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+_*Attributes:*_
+-menuItems: ArrayList&lt;MenuItem&gt;
+-mealDeals: ArrayList&lt;MealDeal&gt;
+-extraItems: ArrayList&lt;MenuItem&gt;
+-tableId: int
+-waiterName: String
+-time: Date
+-status: OrderStatus
+--
+_*Responsibilities:*_
++calculateCost(): double
++submitOrder(): void
++setMenuItems(): void
++setStatus(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>301</y>
+      <w>126</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>812</x>
+      <y>266</y>
+      <w>91</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+OrderStatus
+--
+IN_PROGRESS
+DELIVERED
+COMPLETED
+--
+_*Responsibilities:*_
++values(): OrderStatus[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>329</x>
+      <y>273</y>
+      <w>147</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>CurrentOrders
+--
+_*Attributes:*_
+-currentOrders: ArrayList&lt;Order&gt;
+--
+_*Responsibilities:*_
++sortTime(): void
++viewOrder(): Order
++removeOrder(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>441</y>
+      <w>168</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>MenuItem
+--
+_*Attributes:*_
+-name: String
+-ingredients: ArrayList&lt;String&gt;
+-ingredientQty: ArrayList&lt; ArrayList&lt;Integer&gt; &gt;
+-calories: int
+-allergies: ArrayList&lt;Allergy&gt;
+-imagePath: String
+-cost: double
+-isAvailable: Boolean
+--
+_*Responsibilities:*_
++getIngredients(): ArrayList&lt;Stock&gt;
++getCalories(): int
++getAllergies(): ArrayList&lt;Allergy&gt;
++getImage(): Image
++getCost(): double
++getIsAvailable(): boolean
++update(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>616</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>889</x>
+      <y>518</y>
+      <w>21</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;250.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>721</x>
+      <y>518</y>
+      <w>189</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>490</y>
+      <w>91</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Allergy
+--
+DAIRY_FREE
+GLUTEN_FREE
+LOW_FAT
+LOW_SUGAR
+--
+_*Responsibilities:*_
++values(): Allergy[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>532</y>
+      <w>98</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>637</x>
+      <y>378</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>574</x>
+      <y>35</y>
+      <w>140</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+_*Attributes:*_
+-forename: String
+-surname: String
+-contactNumber: String
+-orderHistory: ArrayList&lt;Order&gt;
+--
+_*Responsibilities:*_
++bookTable(): void
++viewBookedTables(): Table
++viewOrderHistory(): ArrayList&lt;Order&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>798</x>
+      <y>42</y>
+      <w>126</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>RegisteredCustomer
+--
+_*Attributes:*_
+-email: String
+-password: String
+--
+_*Responsibilities:*_
++getEmail(): String
++login(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>77</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>637</x>
+      <y>140</y>
+      <w>21</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>364</x>
+      <y>56</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Table
+--
+_*Attributes:*_
+-tableId: int
+-numberSeated: int
+--
+_*Responsibilities:*_
++getSize(): int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>483</x>
+      <y>84</y>
+      <w>105</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>119</y>
+      <w>238</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;320.0;170.0</additional_attributes>
+  </element>
+</diagram>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="596.0" prefWidth="1272.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customer.viewmenu.ViewMenuController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="menuTable" prefHeight="558.0" prefWidth="1201.0">
+               <columns>
+                  <TableColumn fx:id="imageColumn" prefWidth="107.0" text="Image">
+                     <graphic>
+                        <ImageView fx:id="imageView" fitHeight="35.0" fitWidth="6.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic></TableColumn>
+                  <TableColumn fx:id="nameColumn" prefWidth="172.0" text="Name" />
+                  <TableColumn fx:id="ingredientsColumn" prefWidth="460.0" text="Ingredients" />
+                  <TableColumn fx:id="caloriesColumn" prefWidth="65.0" text="Calories" />
+                  <TableColumn fx:id="typeColumn" prefWidth="191.0" text="Food Type" />
+                  <TableColumn fx:id="allergyColumn" prefWidth="115.0" text="Allergy Info" />
+                  <TableColumn fx:id="dietaryColumn" prefWidth="103.0" text="Dietary Req." />
+                  <TableColumn fx:id="priceColumn" prefWidth="58.0" text="Price" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+         <graphic>
+            <AnchorPane prefHeight="0.0" prefWidth="1231.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="567.0" text="MENU" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="backButton" fitHeight="40.0" fitWidth="37.0" layoutX="14.0" layoutY="5.0" onMouseClicked="#navigateBack" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/ic_arrow_back_black_48dp_2x.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </graphic>
+      </Label>
+   </top>
+</BorderPane>

@@ -1,0 +1,6 @@
+0,placed
+1,confirmed
+2,delivered
+3,payed
+4,canceled
+5,cooked

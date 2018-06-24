@@ -1,0 +1,4 @@
+0,no requirement
+1,spicy
+2,vegan
+3,vegetarian

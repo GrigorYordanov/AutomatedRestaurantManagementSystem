@@ -1,0 +1,7 @@
+0,Other
+1,Indian
+2,Chinese
+3,Dessert
+4,Drink
+5,Meal
+6,Meal-Deal

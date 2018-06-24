@@ -1,0 +1,5 @@
+0,no_allergy
+1,eggs
+2,peanuts
+3,lactouse
+4,gluten

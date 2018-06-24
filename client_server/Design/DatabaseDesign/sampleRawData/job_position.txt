@@ -1,0 +1,4 @@
+0,manager
+1,chef
+2,cook
+3,waiter

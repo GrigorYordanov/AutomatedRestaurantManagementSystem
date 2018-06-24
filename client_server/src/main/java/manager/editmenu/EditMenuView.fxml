@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="492.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.editmenu.EditMenuController">
+	<children>
+		<TabPane layoutX="6.0" layoutY="30.0" prefHeight="634.0" prefWidth="1008.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Edit Menu">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="723.0" prefWidth="970.0">
+							<children>
+								<TableView fx:id="usedIngredients" layoutX="4.0" layoutY="91.0" prefHeight="484.0" prefWidth="453.0">
+
+								</TableView>
+								<Label layoutX="1.0" prefHeight="49.0" prefWidth="990.0" text="Edit Menu" textAlignment="CENTER">
+									<font>
+										<Font name="System Bold" size="33.0" />
+									</font>
+								</Label>
+								<Button fx:id="refresh" layoutX="222.0" layoutY="55.0" mnemonicParsing="false" text="Go" />
+
+								<ChoiceBox fx:id="dishSelector" layoutX="4.0" layoutY="55.0" prefHeight="25.0" prefWidth="207.0" />
+								<TableView fx:id="unusedIngredients" layoutX="538.0" layoutY="91.0" prefHeight="484.0" prefWidth="453.0" />
+                        <Label fx:id="invalidPrice" layoutX="287.0" layoutY="59.0" />
+
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+      <ImageView fx:id="backButton" fitHeight="30.0" fitWidth="34.0" layoutX="14.0" layoutY="-1.0" onMouseClicked="#navigateBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../res/images/ic_arrow_back_black_48dp_2x.png" />
+         </image>
+      </ImageView>
+	</children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.realtimedata.RealtimeDataController">
+   <top>
+      <HBox prefHeight="33.0" prefWidth="1304.0" style="-fx-background-color: yellow;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="backButton" fitHeight="38.0" fitWidth="53.0" onMouseClicked="#navigateBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_arrow_back_black_48dp_2x.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="1278.0" text="Real Time Data" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="dataTable" prefHeight="543.0" prefWidth="970.0">
+              <columns>
+                <TableColumn fx:id="tableColumn" prefWidth="54.0" text="table" />
+                <TableColumn fx:id="tstatusColumn" prefWidth="100.0" text="table status" />
+                  <TableColumn fx:id="orderColumn" prefWidth="52.0" text="order" />
+                  <TableColumn fx:id="ostatusColumn" prefWidth="92.0" text="order status" />
+                  <TableColumn fx:id="costColumn" prefWidth="55.0" text="cost" />
+                  <TableColumn fx:id="requestedColumn" prefWidth="114.0" text="time requested" />
+                  <TableColumn fx:id="confirmedColumn" prefWidth="117.0" text="time confirmed" />
+                  <TableColumn fx:id="deliveredColumn" prefWidth="113.0" text="time delivered" />
+                  <TableColumn fx:id="completedColumn" prefWidth="131.0" text="time completed" />
+                  <TableColumn fx:id="waiterColumn" prefWidth="141.0" text="waiter" />
+              </columns>
+            </TableView>
+            <TableView fx:id="stockTable" prefHeight="543.0" prefWidth="399.0">
+              <columns>
+                <TableColumn fx:id="ingredientColumn" prefWidth="205.0" text="ingredient" />
+                <TableColumn fx:id="quantityColumn" maxWidth="266.0" minWidth="0.0" prefWidth="75.0" text="quantity" />
+                  <TableColumn fx:id="metricColumn" maxWidth="160.0" prefWidth="118.0" text="metric" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,3 @@
+0,free
+1,reserved
+2,unavailable

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="clientApp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.aggregatedata.AggregateDataController">
+   <center>
+      <VBox fx:id="tablesVbox" prefHeight="598.0" prefWidth="1018.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="1057.0" style="-fx-background-color: yellow;" text="Average data for waiters:" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <TableView fx:id="waiterTable" prefHeight="446.0" prefWidth="1018.0">
+              <columns>
+                  <TableColumn fx:id="wnameColumn" prefWidth="196.0" text="waiter name" />
+                <TableColumn fx:id="wordersColumn" prefWidth="63.0" text="orders" />
+                <TableColumn fx:id="wsalesColumn" prefWidth="72.0" text="sales" />
+                  <TableColumn fx:id="wtconfirmColumn" prefWidth="180.0" text="time orders confirmed" />
+                  <TableColumn fx:id="wtdeliverColumn" minWidth="0.0" prefWidth="163.0" text="time orders delivered" />
+                  <TableColumn fx:id="wtcompleteColumn" prefWidth="173.0" text="time orders completed" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" prefHeight="44.0" prefWidth="1018.0" style="-fx-background-color: yellow;" text="Overall data for restourant:">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </center>
+   <top>
+      <Pane fx:id="topPane" prefHeight="39.0" prefWidth="1018.0" BorderPane.alignment="CENTER">
+         <children>
+            <DatePicker fx:id="toCalendar" layoutX="273.0" layoutY="4.0" prefHeight="31.0" prefWidth="160.0" promptText="set interval to:" />
+            <DatePicker fx:id="fromCalendar" layoutX="73.0" layoutY="4.0" prefHeight="31.0" prefWidth="161.0" promptText="set interval from:" />
+            <Button fx:id="calculateButton" layoutX="767.0" layoutY="4.0" mnemonicParsing="false" text="Calculate" />
+            <ImageView fx:id="backButton" fitHeight="31.0" fitWidth="59.0" layoutX="14.0" layoutY="4.0" onMouseClicked="#navigateBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_arrow_back_black_48dp_2x.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <HBox fx:id="bottomHbox" prefHeight="33.0" prefWidth="1018.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="21.0" prefWidth="196.0" text="   average day data:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="rordersField" editable="false" prefHeight="31.0" prefWidth="63.0" />
+            <TextField fx:id="rsalesField" editable="false" prefHeight="31.0" prefWidth="72.0" />
+            <TextField fx:id="rtconfirmField" editable="false" prefHeight="31.0" prefWidth="180.0" />
+            <TextField fx:id="rtdeliverField" editable="false" prefHeight="31.0" prefWidth="163.0" />
+            <TextField fx:id="rtcompleteField" editable="false" prefHeight="31.0" prefWidth="173.0" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

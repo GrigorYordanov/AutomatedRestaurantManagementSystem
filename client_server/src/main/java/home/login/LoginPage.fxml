@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="180.0" prefWidth="400.0" style="-fx-background-color: slategray;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.login.LoginController">
+   <children>
+      <HBox fx:id="staffBox" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <AnchorPane maxHeight="180.0" maxWidth="200.0" minHeight="180.0" minWidth="200.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="staffLoginButton" layoutX="14.0" layoutY="77.0" maxHeight="69.0" maxWidth="150.0" minHeight="69.0" minWidth="150.0" mnemonicParsing="false" onMouseClicked="#goToStaffLogin" onMouseEntered="#staffHovered" onMouseExited="#staffExitHover" prefHeight="69.0" prefWidth="150.0" style="-fx-background-color: dodgerblue; -fx-text-fill: white;" text="Staff">
+                     <font>
+                        <Font name="Segoe UI Light" size="26.0" />
+                     </font></Button>
+               </children>
+            </AnchorPane>
+         </children></HBox>
+      <HBox fx:id="customerBox" layoutX="200.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <AnchorPane maxHeight="180.0" maxWidth="200.0" minHeight="180.0" minWidth="200.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="customerLoginButton" layoutX="37.0" layoutY="77.0" maxHeight="69.0" maxWidth="150.0" minHeight="69.0" minWidth="150.0" mnemonicParsing="false" onMouseClicked="#customerLogin" onMouseEntered="#customerHover" onMouseExited="#customerExitHover" prefHeight="69.0" prefWidth="150.0" style="-fx-background-color: dodgerblue; -fx-text-fill: white;" text="Customer">
+                     <font>
+                        <Font name="Segoe UI Light" size="26.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></AnchorPane>
+         </children></HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="94.0" text="--OR--" textFill="#d3cccc">
+         <font>
+            <Font name="Segoe UI Light" size="22.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="118.0" layoutY="16.0" text="User Selection" textFill="#ebeaea">
+         <font>
+            <Font name="Segoe UI" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

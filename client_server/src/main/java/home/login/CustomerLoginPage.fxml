@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="598.0" style="-fx-background-color: slategrey;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.login.CustomerLoginController">
+   <children>
+      <TextField fx:id="usernameField" alignment="CENTER" layoutX="422.0" layoutY="121.0" prefHeight="25.0" prefWidth="139.0" promptText="Username" style="-fx-background-color: rgb(132,148,160); -fx-text-fill: white;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label fx:id="loginButton" alignment="CENTER" layoutX="422.0" layoutY="220.0" onMouseClicked="#logUserIn" prefHeight="34.0" prefWidth="139.0" style="-fx-background-color: #00AB29; -fx-border-radius: 10 10 10 10; -fx-background-radius: 10 10 10 10;" text="Log In" textFill="#fcfcfc">
+         <font>
+            <Font name="Segoe UI Semibold" size="22.0" />
+         </font>
+      </Label>
+      <Line endY="220.0" layoutX="400.0" layoutY="40.0" stroke="#5e5b5b" />
+      <Button fx:id="registerButton" layoutX="252.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#cutomerRegister" style="-fx-background-color: #2D5CAB;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="viewMenuButton" layoutX="48.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#viewReadOnlyMenu" style="-fx-background-color: #2D5CAB;" text="View Menu" textFill="#f2e6e6">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="423.0" layoutY="161.0" prefHeight="29.0" prefWidth="139.0" promptText="Password" style="-fx-background-color: rgb(132,148,160);">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </PasswordField>
+      <ImageView fx:id="usrIcon" fitHeight="72.0" fitWidth="83.0" layoutX="457.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/userIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backButton" fitHeight="49.0" fitWidth="72.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#navigateBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/ic_arrow_back_black_48dp_2x.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="clientApp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1202.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.employeedata.EmployeeDataController">
+   <center>
+      <TableView fx:id="dataTable" prefHeight="701.0" prefWidth="773.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="jobposColumn" prefWidth="97.0" text="Job Position" />
+          <TableColumn fx:id="nameColumn" minWidth="8.0" prefWidth="172.0" text="Full Name" />
+            <TableColumn fx:id="usernameColumn" prefWidth="168.0" text="Username" />
+            <TableColumn fx:id="emailColumn" prefWidth="217.0" text="Email" />
+            <TableColumn fx:id="telephoneColumn" prefWidth="132.0" text="Telephone" />
+            <TableColumn fx:id="addressColumn" prefWidth="142.0" text="Address" />
+            <TableColumn fx:id="ordersColumn" prefWidth="136.0" text="Orders Completed" />
+            <TableColumn fx:id="salesColumn" prefWidth="137.0" text="Sales From Orders" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <HBox prefHeight="38.0" prefWidth="1021.0" style="-fx-background-color: yellow;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="backButton" fitHeight="38.0" fitWidth="31.0" onMouseClicked="#navigateBack" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_arrow_back_black_48dp_2x.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="989.0" style="-fx-background-color: yellow;" text="Employee Data">
+               <font>
+                  <Font name="Segoe UI Semibold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
